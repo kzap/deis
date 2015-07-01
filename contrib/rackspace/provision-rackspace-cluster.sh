@@ -5,10 +5,10 @@
 
 set -e
 
-THIS_DIR=$(cd $(dirname $0); pwd) # absolute path
-CONTRIB_DIR=$(dirname $THIS_DIR)
+THIS_DIR="$(cd "$(dirname $0)"; pwd)" # absolute path
+CONTRIB_DIR="$(dirname "$THIS_DIR")"
 
-source $CONTRIB_DIR/utils.sh
+source "$CONTRIB_DIR"/utils.sh
 
 if [ -z "$1" ]; then
   echo_red 'Usage: provision-rackspace-cluster.sh <key pair name> [flavor] [environment]'
