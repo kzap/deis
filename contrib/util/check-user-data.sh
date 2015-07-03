@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-THIS_DIR="$(cd "$(dirname "$0")"; pwd)" # absolute path
-CONTRIB_DIR="$(dirname "$THIS_DIR")"
+THIS_DIR=$(cd "$(dirname $0)"; pwd) # absolute path
+CONTRIB_DIR=$(dirname "$THIS_DIR")
 
 # Use the first command-line argument as the user-data path
 USER_DATA="${1:-"$CONTRIB_DIR"/coreos/user-data}"
